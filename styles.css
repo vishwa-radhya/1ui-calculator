@@ -322,15 +322,16 @@ display: flex;
     }
 }
 @media screen and (max-width:389px){
-    .key{
-        width: 17vw;
-        height: 17vw;
-    }
     body{
         background-color: rgb(15, 15, 15);
+        background-image: none;
     }
     .cont{
         height: 95vh;
+    }
+    .key{
+        width: 17vw;
+        height: 17vw;
     }
 }
 @media screen and (max-width:303px){
