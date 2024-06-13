@@ -46,10 +46,6 @@ function expandHistory(){
     }
 }
 
-window.onload=()=>{
-    errorEle.classList.add('hid')
-}
-
 function adddToQuery(arg){
     resetSolutionQueryColor()
     if(queryInput.value.startsWith('0')){
@@ -204,7 +200,18 @@ for(let key of keys){
     key.addEventListener('click',attemptingAutoCalc);
 }
 
+function clearUndefinedHistory(){
+    for(let prop in historyObject){
+        if(historyObject[prop]===undefined){
+            delete historyObject[prop];
+        }
+    }
+}
+
 function updateHistoryTab(){
+    clearUndefinedHistory()
+    const [entryCheck]=Object.keys(historyObject)
+    if(entryCheck){
     const lastIndexKeyArr=Object.keys(historyObject).slice(-1);
     const lastIndexValArr=Object.values(historyObject).slice(-1);
     const [query]=lastIndexKeyArr;
@@ -219,6 +226,9 @@ function updateHistoryTab(){
     solutionP.classList.add('hist-solution')
     historyInfoContainer.appendChild(queryP)
     historyInfoContainer.appendChild(solutionP)
+    }else{
+        return;
+    }
 }
 
 function formatHistoryHandler(){
