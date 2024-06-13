@@ -328,6 +328,7 @@ display: flex;
     }
     .cont{
         height: 95vh;
+        width: 99vw;
     }
     .key{
         width: 17vw;
