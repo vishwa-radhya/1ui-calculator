@@ -1,0 +1,341 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(46, 42, 42);
+    background-image: url(assets/andre-benz-JBkwaYMuhdc-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.cont{
+    height: 97vh;
+    margin-top: 10px;
+    width: min(400px,95vw);
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    background-color: rgb(15, 15, 15);
+    border-radius: 5px;
+    z-index: 2;
+    box-shadow: 0px 1px 2px rgb(117, 117, 117);
+}
+.display{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.query{
+    height: 60%;
+    display: flex;
+    align-items: flex-end;
+}
+.query input{
+    background-color: inherit;
+    width: 100%;
+    height: 40%;
+    outline: none;
+    font-size: 1.9rem;
+    color: rgb(249, 216, 222);
+    text-align: right;
+    border: none;
+}
+::-webkit-inner-spin-button{
+    visibility: hidden;
+}
+.solution{
+    height: 35%;
+    display: flex;
+    align-items: flex-end;
+}
+.solution input{
+    width: 100%;
+    height: 50%;
+    text-align: right;
+    outline: none;
+    color: rgb(87, 70, 73);
+    font-size: 1.4rem;
+    border: none;
+    background-color: inherit;
+}
+.opts{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.del{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controllers{
+    height: 7%;
+    display: flex;
+    padding: 1px;
+    justify-content: space-between;
+}
+.history{
+    border: none;
+}
+.controllers img{
+    border-radius: 50%;
+    padding: 7px;
+}
+.controllers img:active{
+    background-color: rgb(83, 82, 82);
+}
+hr{
+    width: 95%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+}
+.keys-cont{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    justify-content: space-around;
+}
+.keys-cont-inner{
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.key{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bracket-btn{
+    display: flex;
+}
+#bracket-btn span:active{
+    scale: 0.8;
+}
+
+#bracket-btn > *:nth-child(1){
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bracket-btn > *:nth-child(2){
+    border: 1px solid rgb(79, 76, 76);
+    height: 100%; 
+}
+
+#bracket-btn > *:nth-child(3){
+    border: 1px solid rgb(79, 76, 76);
+    height: 100%;
+}
+#bracket-btn > *:nth-child(4){
+    flex: 1;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.keys-cont button{
+    border: none;
+    color: rgb(248, 202, 202);
+    background-color: rgba(40, 39, 39, 0.626);
+}
+button:hover{
+    .key-txt{
+        filter: brightness(120%);
+    }
+}
+button:active{
+    background-color: rgb(88, 87, 87);
+    .key-txt{
+        scale: 0.8;
+    }
+}
+.error-ele{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(77, 74, 74,0.6);
+    color: rgb(220, 218, 218);
+    border-radius: 15px;
+    z-index: 10;
+    top: 82%;
+    left: 42%;
+    font-size: 1rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 9px gray;
+}
+.disabled{
+    filter: brightness(30%);
+}
+.hid{
+display: none;
+}
+.sho{
+display: flex;
+}
+.history-info{
+    background-color: rgb(15, 15, 15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: 0.5s ease;
+}
+.history-info-cont{
+    height: 92%;
+    overflow: scroll;
+}
+::-webkit-scrollbar:horizontal{
+    display: none;
+ }
+::-webkit-scrollbar{
+    background-color: rgb(15, 15, 15);
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(61, 58, 58);
+    border-radius: 20px;
+}
+.hist-p{
+    color: white;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: -2px;
+}
+.hist-query{
+    color: rgb(183, 183, 183);
+    margin-bottom: -9px;
+    font-size: 1.6rem;
+}
+.hist-solution{
+    font-size: 1.7rem;
+    color: rgb(248,202,202);
+}
+.clr-hist-cont{
+    height: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clear-history{
+    background-color: rgb(79,76,76,0.3);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 20px;
+    height: 70%;
+    visibility: hidden;
+    transition: 0.2s ease-in;
+    overflow: hidden;
+}
+#clear-history:active{
+    background-color: rgb(118, 118, 118,0.7);
+}
+/* @media screen and (min-width:500px){
+}
+@media screen and (max-width:401px){
+}
+@media screen and (401px <= width <= 500px){
+} */
+/* @media screen and (100<=width<=1230){
+    .key{
+        color: red;
+        width: 16vw;
+        height: 12vw;
+    }
+} */
+@media screen and (max-width:1220px){
+    .key{
+        width: 6vw;
+        height: 6vw;
+    }
+}
+@media screen and (max-width:1017px){
+    .key{
+        width: 7vw;
+        height: 7vw;
+    }
+}
+@media screen and (max-width:872px){
+    .key{
+        width: 8vw;
+        height: 8vw;
+    }
+}
+@media screen and (max-width:763px){
+    .key{
+        width: 9vw;
+        height: 9vw;
+    }
+}
+@media screen and (max-width:678px){
+    .key{
+        width: 11vw;
+        height: 11vw;
+    }
+}
+@media screen and (max-width:555px){
+    .key{
+        width: 13vw;
+        height: 13vw;
+    }
+}
+@media screen and (max-width:469px){
+    .key{
+        width: 15vw;
+        height: 15vw;
+    }
+}
+@media screen and (max-width:389px){
+    .key{
+        width: 17vw;
+        height: 17vw;
+    }
+}
+@media screen and (max-width:303px){
+    .key{
+        width: 16vw;
+        height: 16vw;
+    }
+}
+@media screen and (max-width:258px){
+    .key{
+        width: 14vw;
+        height: 14vw;
+    }
+}

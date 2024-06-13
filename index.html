@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sm-calculator</title>
+    <link rel="icon" type="image/x-icon" href="assets/calculator.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="display">
+            <div class="query">
+                <input type="text" name="" id="query-input" value="" readonly>
+            </div>
+            <div class="solution">
+                <input type="number" name="" id="solution-input" value="" readonly>
+            </div>
+        </div>
+        <div class="controllers">
+            <div class="opts">
+                <button class="history" onclick="replaceIcons()" id='history' style="background-color: inherit;"><img src="assets/clock.svg" alt="history" id="clock-svg"></button>
+            </div>
+            <div class="del" id="del" onclick="deleteQuery()"><img src="assets/delete.svg" alt="delete"></div>
+        </div>
+        <hr></hr>
+        <div class="keys-cont">
+            <div class="keys-cont-inner">
+                <div class="history-info" id="history-info">
+                    <div class="history-info-cont" id="history-info-cont">
+                    </div>
+                    <div class="clr-hist-cont">
+                    <button class="clear-history" id="clear-history"><span>Clear history</span></button>
+                </div>
+                </div>
+            <button class="key" style="color: rgb(251, 64, 64);" onclick="clearQuery()"><span class="key-txt">C</span></button>
+
+            <button class="key" id="bracket-btn"><div onclick="addBrackets('(')"><span class="key-txt">(</span></div><div></div><div></div>
+            <div onclick="addBrackets(')')"><span class="key-txt">)</span></div></button>
+
+            <button class="key" onclick="addOperators('%')"><span class="key-txt">%</span></button>
+            <button class="key" style="font-size: 2.5rem;" onclick="addOperators('÷')"><span class="key-txt">÷</span></button>
+            <button class="key" onclick="adddToQuery('7')"><span class="key-txt">7</span></button>
+            <button class="key" onclick="adddToQuery('8')"><span class="key-txt">8</span></button>
+            <button class="key" onclick="adddToQuery('9')"><span class="key-txt">9</span></button>
+            <button class="key" style="font-size: 2.5rem;" onclick="addOperators('×')"><span class="key-txt">×</span></button>
+            <button class="key" onclick="adddToQuery('4')"><span class="key-txt">4</span></button>
+            <button class="key" onclick="adddToQuery('5')"><span class="key-txt">5</span></button>
+            <button class="key" onclick="adddToQuery('6')"><span class="key-txt">6</span></button>
+            <button class="key" style="font-size: 2.5rem;" onclick="addOperators('-')"><span class="key-txt">-</span></button>
+            <button class="key" onclick="adddToQuery('1')"><span class="key-txt">1</span></button>
+            <button class="key" onclick="adddToQuery('2')"><span class="key-txt">2</span></button>
+            <button class="key" onclick="adddToQuery('3')"><span class="key-txt">3</span></button>
+            <button class="key" style="font-size: 2.5rem;" onclick="addOperators('+')"><span class="key-txt">+</span></button>
+            <button class="key" onclick="addNegative()"><span class="key-txt">+/-</span></button>
+            <button class="key" onclick="adddToQueryZero('0')"><span class="key-txt">0</span></button>
+            <button class="key" onclick="addPoint()"><span class="key-txt">.</span></button>
+            <button class="key" onclick="solveQuery()" style="font-size: 2.5rem;background-color: rgba(132, 74, 15, 0.812); color: ghostwhite;"><span class="key-txt">=</span></button>
+    </div>
+</div>
+    <div class="error-ele" id="error-ele" style="position: absolute;" ><span>Invalid Format Used</span></div>
+    <script src="./script.js" ></script>
+</body>
+</html>
