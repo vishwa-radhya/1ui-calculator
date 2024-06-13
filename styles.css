@@ -346,3 +346,9 @@ display: flex;
         height: 14vw;
     }
 }
+@media screen and (min-height:750px){
+    .cont{
+        width: 93vw;
+        height: 75vh;
+    }
+}
