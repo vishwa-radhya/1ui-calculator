@@ -326,6 +326,12 @@ display: flex;
         width: 17vw;
         height: 17vw;
     }
+    body{
+        background-color: rgb(15, 15, 15);
+    }
+    .cont{
+        height: 95vh;
+    }
 }
 @media screen and (max-width:303px){
     .key{
