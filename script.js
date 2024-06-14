@@ -283,3 +283,5 @@ function formatHistory(){
 }
 
 clearHistoryBtn.addEventListener('click',formatHistory);
+
+delIcon.addEventListener('')
