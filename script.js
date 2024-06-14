@@ -6,9 +6,10 @@ const historyInfoContainer=document.getElementById('history-info-cont');
 const clearHistoryBtn=document.getElementById('clear-history');
 const changeTheme=document.getElementById('change-theme').children[0]
 const delIcon=document.getElementById('del');
+const delIconImg=document.getElementById('del').children[0];
 let toggleUrl = false;
-const clockUrl='assets/clock.svg';
-const calcUrl='assets/calculator.svg';
+let clockUrl='assets/clock.svg';
+let calcUrl='assets/calculator.svg';
 const argArray=['%','÷','×','-','+'];
 let isDecimal=false;
 const keys=document.getElementsByClassName('key');
@@ -21,12 +22,31 @@ function replaceIcons(){
     expandHistory()
 }
 
+function changeThemeFixer(arg){
+    if(arg==='light'){
+        clockUrl='assets/clock-l.svg';
+        calcUrl='assets/calculator-l.svg';
+        clockIcon.src=clockUrl;
+        delIconImg.src='assets/delete-l.svg';
+    }else{
+        clockUrl='assets/clock.svg';
+        calcUrl='assets/calculator.svg';
+        clockIcon.src=clockUrl;
+        delIconImg.src='assets/delete.svg';
+    }
+}
+
 function changeThemeHandler(){
     if(changeTheme.classList[1]==='fa-sun'){
+        changeThemeFixer('light')
         changeTheme.classList.replace('fa-sun','fa-moon');
+        document.documentElement.setAttribute('data-theme','white')
     }else{
         changeTheme.classList.replace('fa-moon','fa-sun');
+        changeThemeFixer('dark')
+        document.documentElement.setAttribute('data-theme','dark')
     }
+    // document.documentElement.setAttribute('data-theme','white')
 }
 
 changeTheme.addEventListener('click',changeThemeHandler);
