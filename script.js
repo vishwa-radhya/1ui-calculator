@@ -16,6 +16,10 @@ const keys=document.getElementsByClassName('key');
 const errorEle=document.getElementById('error-ele');
 let historyObject={};
 
+window.onload=()=>{
+    changeTheme.style.visibility='visible';
+}
+
 function replaceIcons(){
     toggleUrl=!toggleUrl;
     clockIcon.src= toggleUrl ? calcUrl : clockUrl;

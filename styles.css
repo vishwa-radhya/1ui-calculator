@@ -17,9 +17,8 @@
     --error-ele-bg:rgb(77, 74, 74,0.6);
     --error-ele-clr:rgb(220, 218, 218);
     --error-ele-shadow:gray;
-    --body-bg:rgb(46, 42, 42);
+    --body-bg:rgb(153,190,175);
     --cont-shadow:rgb(117, 117, 117);
-    --bg-img:url(neon/bright-neon-colors-illuminated-arrow.jpg);
 }
 
 [data-theme="white"]{
@@ -43,7 +42,6 @@
     --error-ele-shadow:rgb(122, 121, 121);
     --body-bg:rgb(102, 65, 80);
     --cont-shadow:rgb(58, 55, 55);
-    --bg-img:url(neon/3d-neon-lights-background.jpg);
 }
 /*
     dark-15,15,15
@@ -76,12 +74,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: var(--body-bg);
-    background-image: var(--bg-img);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    transition: 0.6s ease;
+    transition: 0.6s ease; 
 }
 .cont{
     height: 97vh;
