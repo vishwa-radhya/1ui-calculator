@@ -68,6 +68,9 @@ function expandHistory(){
         }else if(innerWidth<250){
             historyInfo.style.width='15rem'
         }
+        if(window.innerHeight>749){
+            historyInfo.style.width='30rem'
+        }
         historyInfo.style.borderRight='1px solid rgb(80, 77, 77,0.4)'
         // historyInfoContainer.style.width='auto'
         // clearHistoryBtn.style.width='60%'
