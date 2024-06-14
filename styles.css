@@ -20,6 +20,29 @@
     --body-bg:rgb(46, 42, 42);
     --cont-shadow:rgb(117, 117, 117);
 }
+
+[data-theme="white"]{
+    --dark-bg:rgb(15, 15, 15);
+    --query-input-color:rgb(249, 216, 222);
+    --solution-input-color:rgb(87, 70, 73);
+    --controllers-img-highlight:rgb(83, 82, 82);
+    --horizontal-ruler:rgba(128, 128, 128, 0.2);
+    --bracket-btns-divider:rgb(79, 76, 76);
+    --keyscont-btn-color:rgb(248, 202, 202);
+    --keyscont-btn-bgc:rgba(40, 39, 39, 0.626);
+    --keys-highlight:rgb(88, 87, 87);
+    --scrl-bar-thumb:rgb(61, 58, 58);
+    --hist-qry-clr:rgb(183, 183, 183);
+    --hist-sol-clr:rgb(248,202,202);
+    --clear-histbtn-bg:rgb(79,76,76,0.3);
+    --clear-histbtn-clr:rgb(255, 255, 255);
+    --clear-histbtn-highlight:rgb(118, 118, 118,0.7);
+    --error-ele-bg:rgb(77, 74, 74,0.6);
+    --error-ele-clr:rgb(220, 218, 218);
+    --error-ele-shadow:gray;
+    --body-bg:rgb(46, 42, 42);
+    --cont-shadow:rgb(117, 117, 117);
+}
 /*
     dark-15,15,15
     q-inp-color-249,216,222
@@ -74,6 +97,24 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.change-theme{
+    display: flex;
+    justify-content: flex-end;
+}
+.change-theme i{
+    font-size: 1.4rem;
+    margin: 5px 5px 2px 1px;
+    transition: 0.5s ease;
+}
+.fa-sun{
+    color: white;
+}
+.fa-moon{
+    color: black;
+}
+.fas:active{
+    scale: 1.30;
 }
 .query{
     height: 60%;

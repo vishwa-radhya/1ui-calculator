@@ -4,6 +4,7 @@ const solutionInput=document.getElementById('solution-input');
 const historyInfo=document.getElementById('history-info');
 const historyInfoContainer=document.getElementById('history-info-cont');
 const clearHistoryBtn=document.getElementById('clear-history');
+const changeTheme=document.getElementById('change-theme').children[0]
 const delIcon=document.getElementById('del');
 let toggleUrl = false;
 const clockUrl='assets/clock.svg';
@@ -14,12 +15,22 @@ const keys=document.getElementsByClassName('key');
 const errorEle=document.getElementById('error-ele');
 let historyObject={};
 
-
 function replaceIcons(){
     toggleUrl=!toggleUrl;
     clockIcon.src= toggleUrl ? calcUrl : clockUrl;
     expandHistory()
 }
+
+function changeThemeHandler(){
+    if(changeTheme.classList[1]==='fa-sun'){
+        changeTheme.classList.replace('fa-sun','fa-moon');
+    }else{
+        changeTheme.classList.replace('fa-moon','fa-sun');
+    }
+}
+
+changeTheme.addEventListener('click',changeThemeHandler);
+
 
 function expandHistory(){
     const innerWidth=window.innerWidth;
